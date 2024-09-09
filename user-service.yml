@@ -67,3 +67,22 @@ info:
 
 demo:
   config: second update demo-config
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      project-service:
+        baseConfig: default
+      task-service:
+        baseConfig: default
+        waitDurationInOpenState: 20000
+    configs:
+      default:
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10000
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        permittedNumberOfCallsInHalfOpenState: 2
+
+

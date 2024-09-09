@@ -16,7 +16,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:1991/task-db
     username: postgres
-    password: 1991
+    password: '{cipher}0803fcdaf7ae64713f77b0bf5fbae2dd24e73bfd51d3bf29e21bc5c28fc89a85'
     driver-class-name: org.postgresql.Driver
     initialization-mode: always
 
