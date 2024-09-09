@@ -64,3 +64,6 @@ info:
   application:
     name: user-service
     description: Ticketing Application User Service
+
+demo:
+  config: demo-config
